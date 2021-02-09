@@ -23,7 +23,7 @@ function handleDrag(item) {
         y = event.clientY;
 
     selectedItem.classList.add('drag-sort-active');
-    document.querySelector("main section > ul").classList.add("unfocus");
+    document.querySelector('main section > ul').classList.add('unfocus');
     let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y);
 
     if (list === swapItem.parentNode) {
@@ -34,7 +34,7 @@ function handleDrag(item) {
 
 function handleDrop(item) {
     item.target.classList.remove('drag-sort-active');
-    document.querySelector("main section > ul").classList.remove("unfocus");
+    document.querySelector('main section > ul').classList.remove('unfocus');
 }
 
 (()=> {enableDragSort('drag-sort-enable')})();
