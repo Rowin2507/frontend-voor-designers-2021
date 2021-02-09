@@ -34,53 +34,19 @@ body {
   font-style: normal;
   color: var(--color-white); 
 }
-.wrapper {
-  margin: 0 auto;
-  width: 90%;
+body:after {
+  content: "Rowin Schmidt";
+  position: fixed;
+  left: 35px;
+  bottom: 28px;
+  color: var(--color-dark);
+  font-weight: 600;
 }
 
 
 /* GENERAL STYLING ---------------------------------------------- */
 /* HEADER ----------- */
-/* header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-bottom: 7px;
-  width: 100%;
-  background-color: transparent;
-  z-index: 98;
-}
-header.hidden {
-  display: none;
-}
-header ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 85%;
-  list-style: none;
-}
-header ul li button {
-  background-color: transparent;
-  cursor: pointer;
-}
-header ul li svg {
-  height: 20px;
-  transition: 0.5s transform;
-}
-header ul li button:hover svg,
-header ul li button:focus svg {
-  transform: rotate(90deg);
-}
-header ul li svg path {
-  fill: var(--color-white);
-  transition: 0.25s;
-}
-header ul li button:focus svg path {
-  fill: var(--color-green);
-} */
+
 
 /* MAIN ----------- */
 main {
@@ -96,13 +62,6 @@ main {
   box-shadow: 0 15px 50px rgba(58, 58, 166, 0.35);
   animation: 1.5s main-entering ease;
 }
-
-
-
-
-
-
-
 
 
 /* PLAYLIST INFO */
@@ -130,7 +89,6 @@ main section:first-of-type p {
   width: 90%;
   line-height: 1.3em;
 }
-
 
 
 /* PLAYLIST CONTENT */
@@ -178,7 +136,7 @@ main section > ul li p {
 }
 
 
-/* FOOTER */
+/* FOOTER ----------- */
 footer > button {
   position: absolute;
   bottom: 1.5em;
@@ -197,7 +155,8 @@ footer > button:hover {
   background-color: var(--color-green-hover);
 }
 
-/* KEYFRAMES */
+
+/* KEYFRAMES ---------------------------------------------- */
 @keyframes button-entering {
   0%, 65% {
     transform: translateY(250%) translateX(-50%);
