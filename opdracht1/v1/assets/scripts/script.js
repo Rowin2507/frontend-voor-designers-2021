@@ -1,5 +1,5 @@
 // DRAG SORTING ITEMS - WITH AUTO REARRANGE
-// https://codepen.io/fitri/full/oWovYj/
+// https://codepen.io/fitri/pen/VbrZQm
 
 function enableDragSort(listClass) {
     const sortableLists = document.getElementsByClassName(listClass);
