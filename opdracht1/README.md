@@ -5,13 +5,13 @@ Ontwerp een user interface voor een gegeven use case. Werk je ontwerp uit in HTM
 Lees hier de [opdrachtbeschrijving](./opdrachtbeschrijving.md).
 
 
-# Project titel
-Beschrijf hier je eigen project.
-En voeg een link naar je demo toe.
+# Quarantine Party lijst
+Een kleine opdracht om een afspeellijst te kunnen sorteren door gebruik te maken van drag and drop.
+<a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht1/v1/" target="_blank">Link naar opdracht</a>
 
-## interface
-Leg de interface uit. In de demo heb je de interface design principles 04 & 11 van [Principles of User Interface Design](http://bokardo.com/principles-of-user-interface-design/) toegepast. Hoe heb je dat gedaan?
+## Interface
+Gebruikers kunnen te allen tijde zelf de volgorde aanpassen van de afspeellijst. Zo blijft de gebruiker altjid de controle houden.
+Door de pagina op te delen uit twee delen (playlist informatie en playlist content), blijft het overzicht behouden en is het eenvoudig om handelingen uit te voeren.
 
-
-## code
+## Code
 Leg de code uit.
