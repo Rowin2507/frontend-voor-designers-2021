@@ -40,7 +40,7 @@ body:after {
   left: 35px;
   bottom: 28px;
   color: var(--color-dark);
-  font-weight: 600;
+  font-weight: 600; 
 }
 
 
