@@ -18,6 +18,8 @@
   box-sizing: border-box;
   outline: none;
   font-family: 'Montserrat', sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
 }
 body {
   display: flex;
@@ -25,14 +27,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   position: relative;
   margin: 0 auto;
-  padding: 0;
+  padding: 2em 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400; 
   font-style: normal;
   color: var(--color-white); 
+  overflow: hidden;
 }
 body:after {
   content: "Rowin Schmidt";
@@ -52,7 +56,9 @@ body:after {
 main {
   /* height: 100vh;
   width: 100vw; */
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background-color: var(--color-dark);
   position: relative;
   margin: 0 auto;
@@ -66,12 +72,23 @@ main {
 
 /* PLAYLIST INFO */
 main section:first-of-type {
+  position: relative;
   padding-top: 4em;
   padding-bottom: 1.75em;
   background-color: rgba(58, 58, 166, 0.15);
-  border-radius: 0 0 3em 3em;
-  margin-bottom: 2em;
+  border-radius: 40px 40px 3em 3em;
   text-align: center;
+}
+main section:first-of-type:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2em;
+  height: 2em;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(12,12,31,0) 0%, rgba(12,12,31,1) 90%, rgba(12,12,31,1) 95%);
+  pointer-events: none;
+  z-index: 1;
 }
 main section:first-of-type img {
   width: 8em;
@@ -92,51 +109,103 @@ main section:first-of-type p {
 
 
 /* PLAYLIST CONTENT */
-main section > ul {
+main section:nth-of-type(2) {
+  overflow-y: auto;
+  flex: 1;
+  padding-top: 2em;
+  padding-bottom: 4.5em;
+  margin-bottom: 0.5em;
+}
+main section:nth-of-type(2) > ul {
   display: flex;
   flex-direction: column;
+  list-style: none;
 }
-main section > ul li {
+main section:nth-of-type(2) > ul li {
+  position: relative;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   cursor: pointer;
   transition: 0.25s;
 }
-main section > ul li:hover {
+main section:nth-of-type(2) > ul li:after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 7px;
+  width: 1em;
+  border-top: 1px solid var(--color-white); 
+  border-bottom: 1px solid var(--color-white);
+  opacity: 0.35;
+  transition: 0.25s;
+}
+main section:nth-of-type(2) > ul li:hover {
   opacity: 0.65;
 }
-main section > ul.unfocus li {
+main section:nth-of-type(2) > ul li:hover:after {
+  opacity: 1;
+}
+main section:nth-of-type(2) > ul.unfocus li {
   opacity: 0.45;
 }
-main section > ul li.drag-sort-active {
+main section:nth-of-type(2) > ul.unfocus li:after {
+  opacity: 0.45;
+}
+main section:nth-of-type(2) > ul li.drag-sort-active {
   background-color: rgba(58, 58, 166, 0.15);
   opacity: 1;
 }
-main section > ul li figure {
+/* HIDE ORIGINAL ELEMENT WHEN DRAGGING */
+/* https://stackoverflow.com/questions/36379184/html5-draggable-hide-original-element */
+main section:nth-of-type(2) > ul li.drag-sort-active * {
+  transform: translateX(-9999px);
+}
+main section:nth-of-type(2) > ul li.drag-sort-active:after {
+  opacity: 0;
+}
+main section:nth-of-type(2) > ul li figure {
   margin: 0 auto;
   width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-main section > ul li figcaption {
+main section:nth-of-type(2) > ul li figcaption {
   margin-left: 0.75em;
 }
-main section > ul li img {
+main section:nth-of-type(2) > ul li img {
   width: 2.65em;
   border-radius: 5px;
+  pointer-events: none;
 }
-main section > ul li h4 {
+main section:nth-of-type(2) > ul li h4 {
   font-size: 0.9em;
   font-weight: 600;
 }
-main section > ul li p {
+main section:nth-of-type(2) > ul li p {
   font-size: 0.75em;
   opacity: 0.65;
 }
 
 
 /* FOOTER ----------- */
+footer {
+  position: relative;
+}
+footer:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(12,12,31,0) 0%, rgba(12,12,31,1) 90%, rgba(12,12,31,1) 95%);
+  border-radius: 0 0 40px 40px; 
+  pointer-events: none;
+  z-index: 1;
+}
 footer > button {
   position: absolute;
   bottom: 1.5em;
@@ -150,6 +219,7 @@ footer > button {
   transition: 0.25s;
   animation: 2.5s button-entering ease;
   cursor: pointer;
+  z-index: 2;
 }
 footer > button:hover {
   background-color: var(--color-green-hover);
@@ -169,9 +239,14 @@ footer > button:hover {
 @keyframes main-entering {
   0%, 35% {
     transform: translateY(150%);
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
   }
   100% {
     transform: translateY(0);
+    overflow: auto;
   }
 } 
 
