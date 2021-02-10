@@ -53,3 +53,25 @@ function handleDrop(item) {
 // PREVENT DEFAULT DRAG & DROP ANIMATION IN BROWSER --------------------------------------------------------------------------------------
 // https://stackoverflow.com/questions/42991709/how-to-disable-dragend-animation-in-html5/51697038#51697038
 document.addEventListener('dragover', function(e) { e.preventDefault(); });
+
+
+
+// EXPORT PLAYLIST OVERLAY --------------------------------------------------------------------------------------
+var exportPlaylistoverlay = document.querySelector('main section:nth-of-type(3)');
+
+// SHOW EXPORT PLAYLIST OVERLAY
+var exportPlaylistButton = document.querySelector('footer > button');
+exportPlaylistButton.addEventListener("click", exportPlaylistShow);
+
+function exportPlaylistShow() {
+    exportPlaylistoverlay.classList.add('visible');
+}
+
+
+// HIDE EXPORT PLAYLIST OVERLAY
+var exportPlaylistCloseButton = document.querySelector('main section:nth-of-type(3) button');
+exportPlaylistCloseButton.addEventListener("click", exportPlaylistHide);
+
+function exportPlaylistHide() {
+    exportPlaylistoverlay.classList.remove('visible');
+}
