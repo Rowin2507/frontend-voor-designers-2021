@@ -11,7 +11,6 @@ function enableDragSort(listClass) {
 // ENABLE DRAGGING OF CHILDREN FROM LIST (ul) > ASSIGN FUNCTION PER ITEM
 function enableDragList(list) {
     Array.prototype.map.call(list.children, (item) => {enableDragItem(item)});
-    console.log(list);
 }
 
 // ENABLE DRAGGING PER ITEM OF LIST

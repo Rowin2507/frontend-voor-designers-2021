@@ -184,7 +184,7 @@ main section:nth-of-type(2) > ul li h4 {
   font-size: 0.9em;
   font-weight: 600;
 }
-main section:nth-of-type(2) > ul li p {
+main section:nth-of-type(2) > ul li p { 
   font-size: 0.75em;
   opacity: 0.65;
 }
