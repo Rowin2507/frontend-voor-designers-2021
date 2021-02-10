@@ -40,7 +40,7 @@ function handleDrag(item) {
     }
 }
 
-// WHEN DRAGGING ENDS > REMOVE CLASSES
+// WHEN DRAGGING ENDS > REMOVE CLASSES 
 function handleDrop(item) {
     item.target.classList.remove('drag-sort-active');
     document.querySelector('main section:nth-of-type(2) > ul').classList.remove('unfocus');
