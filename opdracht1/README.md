@@ -7,7 +7,14 @@ Lees hier de [opdrachtbeschrijving](./opdrachtbeschrijving.md).
 
 # Quarantine Party lijst
 Een kleine opdracht om een afspeellijst te kunnen sorteren door gebruik te maken van drag and drop.
-<a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht1/v1/" target="_blank">Link naar opdracht</a>
+<ul>
+  <li>
+    <a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht1/v1/" target="_blank">Link naar opdracht (v1)</a>
+  </li>
+  <li>
+    <a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht1/v2/" target="_blank">Link naar opdracht (v2)</a>
+  </li>
+</ul>
 
 ## Interface
 Gebruikers kunnen te allen tijde zelf de volgorde aanpassen van de afspeellijst. Zo blijft de gebruiker altjid de controle houden.
