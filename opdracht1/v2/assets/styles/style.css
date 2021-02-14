@@ -1,0 +1,411 @@
+/* CSS VARIABLES ---------------------------------------------- */
+/* https://www.w3schools.com/css/css3_variables.asp */
+:root {
+  --color-green: #17fcce;
+  --color-green-hover: #0dd4ac;
+  --color-white: #FFFFFF;
+  --color-dark: #0c0c1f;
+  /* --color-dark2: #11112e; */
+}
+
+
+/* PREDEFINED ---------------------------------------------- */
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  margin: 0 auto;
+  padding: 2em 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400; 
+  font-style: normal;
+  color: var(--color-white); 
+  overflow: hidden;
+}
+body:after {
+  content: "Rowin Schmidt";
+  position: fixed;
+  left: 35px;
+  bottom: 28px;
+  color: var(--color-dark);
+  font-weight: 600; 
+}
+
+
+/* GENERAL STYLING ---------------------------------------------- */
+/* HEADER ----------- */
+main > header {
+  position: absolute;
+  top: 0;
+  left: 7.5%;
+  padding-top: 4.25em;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+main > header svg {
+  height: 1.1em;
+}
+main > header svg path {
+  fill: var(--color-white);
+}
+
+/* MAIN ----------- */
+main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-dark);
+  position: relative;
+  margin: 0 auto;
+  height: 812px;
+  width: 375px;
+  border-radius: 40px;
+  box-shadow: 0 15px 50px rgba(58, 58, 166, 0.35);
+  animation: 1.5s main-entering ease;
+}
+
+
+/* PLAYLIST INFO */
+main section:first-of-type {
+  position: relative;
+  padding-top: 4em;
+  padding-bottom: 0.9em;
+  background-color: rgba(58, 58, 166, 0.15);
+  border-radius: 40px 40px 3em 3em;
+  text-align: center;
+}
+main section:first-of-type:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2em;
+  height: 2em;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(12,12,31,0) 0%, rgba(12,12,31,1) 90%, rgba(12,12,31,1) 95%);
+  pointer-events: none;
+  z-index: 1;
+}
+main section:first-of-type img {
+  width: 130px; /* 8EM */
+  border-radius: 1.25em;
+}
+main section:first-of-type h2 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+main section:first-of-type p {
+  margin: 0 auto;
+  font-size: 0.85em;
+  opacity: 0.65;
+  width: 90%;
+  line-height: 1.3em;
+}
+main section:first-of-type ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1em;
+}
+main section:first-of-type ul li {
+  margin: 0;
+  padding: 0;
+}
+main section:first-of-type ul li a {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin-right: 2.5em;
+  width: fit-content;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--color-white);
+  transition: 0.25s;
+}
+main section:first-of-type ul li a:hover {
+  opacity: 0.65;
+}
+main section:first-of-type ul li a img {
+  margin-right: 0.65em;
+  width: 1.65em;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateY(-1px);
+}
+main section:first-of-type ul li span {
+  font-size: 0.8em;
+  opacity: 0.65;
+}
+main section:first-of-type.scrolling {
+  padding-bottom: 0.35em;
+}
+main section:first-of-type.scrolling > img {
+  display: none;
+}
+main section:first-of-type.scrolling h2 {
+  transform: translateY(-18px);
+  font-size: 1.15em;
+}
+main section:first-of-type.scrolling p {
+  display: none;
+}
+main section:first-of-type.scrolling ul {
+  display: none;
+}
+
+
+
+/* PLAYLIST CONTENT */
+main section:nth-of-type(2) {
+  overflow-y: auto;
+  flex: 1;
+  padding-top: 2em;
+  padding-bottom: 4.5em;
+  margin-bottom: 0.5em;
+}
+main section:nth-of-type(2) > ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+main section:nth-of-type(2) > ul li {
+  position: relative;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  cursor: pointer;
+  transition: 0.25s;
+}
+main section:nth-of-type(2) > ul li:after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 7px;
+  width: 1em;
+  border-top: 1px solid var(--color-white); 
+  border-bottom: 1px solid var(--color-white);
+  opacity: 0.35;
+  transition: 0.25s;
+}
+main section:nth-of-type(2) > ul li:hover {
+  opacity: 0.65;
+}
+main section:nth-of-type(2) > ul li:hover:after {
+  opacity: 1;
+}
+main section:nth-of-type(2) > ul.unfocus li {
+  opacity: 0.45;
+}
+main section:nth-of-type(2) > ul.unfocus li:after {
+  opacity: 0.45;
+}
+main section:nth-of-type(2) > ul li.drag-sort-active {
+  background-color: rgba(58, 58, 166, 0.15);
+  opacity: 1;
+}
+/* HIDE ORIGINAL ELEMENT WHEN DRAGGING */
+/* https://stackoverflow.com/questions/36379184/html5-draggable-hide-original-element */
+main section:nth-of-type(2) > ul li.drag-sort-active * {
+  transform: translateX(-9999px);
+}
+main section:nth-of-type(2) > ul li.drag-sort-active:after {
+  opacity: 0;
+}
+main section:nth-of-type(2) > ul li figure {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main section:nth-of-type(2) > ul li figcaption {
+  margin-left: 0.75em;
+}
+main section:nth-of-type(2) > ul li img {
+  width: 2.65em;
+  border-radius: 5px;
+  pointer-events: none;
+}
+main section:nth-of-type(2) > ul li h4 {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+main section:nth-of-type(2) > ul li p { 
+  font-size: 0.75em;
+  opacity: 0.65;
+}
+
+
+/* EXPORT OVERLAY */
+main section:nth-of-type(3) {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(58, 58, 166, 0.15);
+  border-radius: 40px;
+  backdrop-filter: blur(25px);
+  padding-top: 2em;
+  padding-bottom: 4.5em;
+  z-index: 10;
+  transition: 0.45s;
+  opacity: 0;
+  visibility: hidden;
+}
+main section:nth-of-type(3).visible {
+  opacity: 1;
+  visibility: visible;
+}
+main section:nth-of-type(3) header {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+main section:nth-of-type(3) header h2 {
+  font-size: 1.5em;
+  opacity: 0;
+  transition: 0.35s;
+  transition-delay: 0.1s;
+}
+main section:nth-of-type(3).visible header h2 {
+  opacity: 1;
+}
+main section:nth-of-type(3) > ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0 auto;
+  transform: translateY(2.5em);
+  transition: 0.45s;
+}
+main section:nth-of-type(3).visible > ul {
+  transform: translateY(0);
+}
+main section:nth-of-type(3) > ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em 7.5% 1em 7.5%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+main section:nth-of-type(3) > ul li:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+main section:nth-of-type(3) > ul li h3 {
+  font-size: 1em;
+  font-weight: 600;
+}
+main section:nth-of-type(3) > ul li img {
+  height: 1.75em;
+  width: 1.75em;
+  margin-right: 0.75em;
+  object-fit: contain;
+}
+main section:nth-of-type(3) button {
+  position: absolute;
+  bottom: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.85em 2em;
+  font-weight: 600;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 2em;
+  color: var(--color-white);
+  transition: 0.25s;
+  cursor: pointer;
+}
+main section:nth-of-type(3) button:hover {
+  background-color: rgba(255,255,255,0.25);
+}
+
+
+
+/* FOOTER ----------- */
+footer {
+  position: relative;
+}
+footer:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(12,12,31,0) 0%, rgba(12,12,31,1) 90%, rgba(12,12,31,1) 95%);
+  border-radius: 0 0 40px 40px; 
+  pointer-events: none;
+  z-index: 1;
+}
+footer > button {
+  position: absolute;
+  bottom: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.85em 2em;
+  border-radius: 2em;
+  font-weight: 600;
+  background-color: var(--color-green);
+  color: var(--color-dark);
+  transition: 0.25s;
+  animation: 2.5s button-entering ease;
+  cursor: pointer;
+  z-index: 2;
+}
+footer > button:hover {
+  background-color: var(--color-green-hover);
+}
+
+
+/* KEYFRAMES ---------------------------------------------- */
+@keyframes button-entering {
+  0%, 65% {
+    transform: translateY(250%) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes main-entering {
+  0%, 35% {
+    transform: translateY(150%);
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    overflow: auto;
+  }
+} 
+
+
+
+
+
+
+
