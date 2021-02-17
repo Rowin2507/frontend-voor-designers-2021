@@ -16,7 +16,7 @@ Een kleine opdracht om een afspeellijst te kunnen sorteren door gebruik te maken
   </li>
 </ul>
 
-Met de eerste versie was ik eigenlijk al behoorlijk tevreden, echter kwam er uit de feedback van klasgenoten naar voren dat op een wat kleiner scherm de playlist informatie (bovenste section) erg veel ruimte in nam en er niet zo veel content over bleef voor de playlist items zelf. Om deze reden heb ik in de tweede versie dan ook een functie gemaakt die tijdens het scrollen deze sectie in laat schuiven om zo meer ruimte te bieden aan de content. Zie de onderstaande afbeeldingen voor een verschil tussen versie 1 en versie 2 indien ze naar beneden zijn gescrolled.
+Met de eerste versie was ik eigenlijk al behoorlijk tevreden, echter kwam er uit de feedback van klasgenoten naar voren dat op een wat kleiner scherm de playlist informatie (bovenste section) erg veel ruimte in nam en er niet zo veel content over bleef voor de playlist items zelf. Om deze reden heb ik in de tweede versie dan ook een functie gemaakt die tijdens het scrollen deze sectie in laat schuiven om zo meer ruimte te bieden aan de content. Zie de onderstaande afbeeldingen voor een verschil tussen versie 1 en versie 2 indien ze volledig naar beneden zijn gescrolled.
 
 <img src="v2/assets/images/screenshots/v1.png" width="275px" alt="Een screenshot van de eerste versie (gescrolled).">
 <img src="v2/assets/images/screenshots/v2.png" width="275px" alt="Een screenshot van de tweede versie (gescrolled).">
