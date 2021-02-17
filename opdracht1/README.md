@@ -16,6 +16,11 @@ Een kleine opdracht om een afspeellijst te kunnen sorteren door gebruik te maken
   </li>
 </ul>
 
+Met de eerste versie was ik eigenlijk al behoorlijk tevreden, echter kwam er uit de feedback van klasgenoten naar voren dat op een wat kleiner scherm de playlist informatie (bovenste section) erg veel ruimte in nam en er niet zo veel content over bleef voor de playlist items zelf. Om deze reden heb ik in de tweede versie dan ook een functie gemaakt die tijdens het scrollen deze sectie in laat schuiven om zo meer ruimte te bieden aan de content. Zie de onderstaande afbeeldingen voor een verschil tussen versie 1 en versie 2 indien ze naar beneden zijn gescrolled.
+
+<img src="v2/assets/images/screenshots/screenshot2.png" width="350px" alt="Een screenshot van de eerste versie (gescrolled).">
+<img src="v2/assets/images/screenshots/screenshot2.png" width="350px" alt="Een screenshot van de eerste versie (gescrolled).">
+
 ## Interface
 Gebruikers kunnen te allen tijde zelf de volgorde aanpassen van de afspeellijst. Zo blijft de gebruiker altjid de controle houden.
 Door de pagina op te delen uit twee delen (playlist informatie en playlist content), blijft het overzicht behouden en is het eenvoudig om handelingen uit te voeren. Ik heb hierbij dus de principes "keep users in control" gebruikt en "Strong visual hierarchies work best" heb ik hier ook toegepast. 
