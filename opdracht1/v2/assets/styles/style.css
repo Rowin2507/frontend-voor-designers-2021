@@ -149,7 +149,7 @@ main section:first-of-type ul li a {
   transition: 0.25s;
 }
 main section:first-of-type ul li a:hover {
-  opacity: 0.65;
+  opacity: 0.65; 
 }
 main section:first-of-type ul li a img {
   margin-right: 0.65em;
