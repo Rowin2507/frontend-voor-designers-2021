@@ -24,12 +24,17 @@ De interface heb ik zelf ontworpen en heb ik zo minimalistisch mogelijk proberen
 
 ## Code
 In het eerste deel van de code wordt het drag and drop principe mogelijk gemaakt. In de screenshot is per stap beschreven wat er gebeurt.
+
 <img src="v2/assets/images/screenshots/screenshot1.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
+
 In het tweede deel
+
 <img src="v2/assets/images/screenshots/screenshot2.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
+
 In het eerste deel van de code wordt het drag and drop principe mogelijk gemaakt. In de screenshot is per stap beschreven wat er gebeurt.
+
 <img src="v2/assets/images/screenshots/screenshot3.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
 ## Bronnen
