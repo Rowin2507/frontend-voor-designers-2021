@@ -107,8 +107,8 @@ function playlistContentScroll() {
             opacity = 0;
             opacityFast = 0;
             opacityHalf = 0;
-            // playlistInfoHeight = 116;
-            // playlistInfoContentTransform = - 162;
+            playlistInfoHeight = 116;
+            playlistInfoContentTransform = checkpoint;
         }
         // ANIMATE HTML ELEMENTS
         playlistImage.style.opacity = opacityFast;
