@@ -121,4 +121,4 @@ function playlistContentScroll() {
         playlistInfoContentP.style.opacity = opacityHalf;
     });
 }
-playlistContentScroll();
+playlistContentScroll(); 
