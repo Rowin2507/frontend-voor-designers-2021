@@ -1,7 +1,6 @@
 // DRAG SORTING ITEMS - WITH AUTO REARRANGE --------------------------------------------------------------------------------------
 // https://codepen.io/fitri/pen/VbrZQm
 
-
 // ENABLE DRAG SORTING IN DEFINED ELEMENT WITH CLASS (drag-sort-enable)
 function enableDragSort(listClass) {
     const sortableLists = document.getElementsByClassName(listClass);
