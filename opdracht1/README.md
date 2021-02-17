@@ -23,7 +23,14 @@ Door de pagina op te delen uit twee delen (playlist informatie en playlist conte
 De interface heb ik zelf ontworpen en heb ik zo minimalistisch mogelijk proberen vorm te geven om de nadruk te leggen op de content (de afspeellijst zelf dus). Om goed duidelijk te maken welke elementen op moeten vallen, heb ik het contrast hoog gehouden. De achtergrond kleur is zo dus donkerblauw en de Buttons of andere CTA's zijn meer mint kleur of wit.
 
 ## Code
+In het eerste deel van de code wordt het drag and drop principe mogelijk gemaakt. In de screenshot is per stap beschreven wat er gebeurt.
 <img src="v2/assets/images/screenshots/screenshot1.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
+
+In het tweede deel
+<img src="v2/assets/images/screenshots/screenshot2.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
+
+In het eerste deel van de code wordt het drag and drop principe mogelijk gemaakt. In de screenshot is per stap beschreven wat er gebeurt.
+<img src="v2/assets/images/screenshots/screenshot3.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
 ## Bronnen
 1. https://codepen.io/fitri/pen/VbrZQm
