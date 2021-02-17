@@ -6,7 +6,7 @@ Lees hier de [opdrachtbeschrijving](./opdrachtbeschrijving.md).
 
 
 # Quarantine Party lijst
-Een kleine opdracht om een afspeellijst te kunnen sorteren door gebruik te maken van drag and drop.
+Een kleine opdracht om een afspeellijst te kunnen sorteren door gebruik te maken van drag and drop. 
 <ul>
   <li>
     <a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht1/v1/" target="_blank">Link naar opdracht (v1)</a>
@@ -22,3 +22,8 @@ Door de pagina op te delen uit twee delen (playlist informatie en playlist conte
 
 ## Code
 Leg de code uit.
+
+## Bronnen
+1. https://codepen.io/fitri/pen/VbrZQm
+2. https://stackoverflow.com/questions/42991709/how-to-disable-dragend-animation-in-html5/51697038#51697038
+3. https://webdesign.tutsplus.com/tutorials/simple-fade-effect-on-scroll--cms-35166
