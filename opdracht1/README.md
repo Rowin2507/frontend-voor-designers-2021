@@ -18,7 +18,9 @@ Een kleine opdracht om een afspeellijst te kunnen sorteren door gebruik te maken
 
 ## Interface
 Gebruikers kunnen te allen tijde zelf de volgorde aanpassen van de afspeellijst. Zo blijft de gebruiker altjid de controle houden.
-Door de pagina op te delen uit twee delen (playlist informatie en playlist content), blijft het overzicht behouden en is het eenvoudig om handelingen uit te voeren.
+Door de pagina op te delen uit twee delen (playlist informatie en playlist content), blijft het overzicht behouden en is het eenvoudig om handelingen uit te voeren. Ik heb hierbij dus de principes "keep users in control" gebruikt en "Strong visual hierarchies work best" heb ik hier ook toegepast. 
+
+De interface heb ik zelf ontworpen en heb ik zo minimalistisch mogelijk proberen vorm te geven om de nadruk te leggen op de content (de afspeellijst zelf dus). Om goed duidelijk te maken welke elementen op moeten vallen, heb ik het contrast hoog gehouden. De achtergrond kleur is zo dus donkerblauw en de Buttons of andere CTA's zijn meer mint kleur of wit.
 
 ## Code
 Leg de code uit.
