@@ -106,11 +106,13 @@ main section:first-of-type:before {
 main section:first-of-type img {
   width: 130px; /* 8EM */
   border-radius: 1.25em;
+  will-change: transform;
 }
 main section:first-of-type h2 {
   font-size: 1.5em;
   margin-top: 1em;
   margin-bottom: 0.25em;
+  will-change: transform;
 }
 main section:first-of-type p {
   margin: 0 auto;
@@ -118,6 +120,7 @@ main section:first-of-type p {
   opacity: 0.65;
   width: 90%;
   line-height: 1.3em;
+  will-change: transform;
 }
 main section:first-of-type ul {
   list-style: none;
@@ -126,6 +129,7 @@ main section:first-of-type ul {
   align-items: flex-start;
   justify-content: center;
   margin-top: 1em;
+  will-change: transform;
 }
 main section:first-of-type ul li {
   margin: 0;
@@ -158,23 +162,6 @@ main section:first-of-type ul li span {
   font-size: 0.8em;
   opacity: 0.65;
 }
-main section:first-of-type.scrolling {
-  padding-bottom: 0.35em;
-}
-main section:first-of-type.scrolling > img {
-  display: none;
-}
-main section:first-of-type.scrolling h2 {
-  transform: translateY(-18px);
-  font-size: 1.15em;
-}
-main section:first-of-type.scrolling p {
-  display: none;
-}
-main section:first-of-type.scrolling ul {
-  display: none;
-}
-
 
 
 /* PLAYLIST CONTENT */
