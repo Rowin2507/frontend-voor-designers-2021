@@ -23,7 +23,7 @@ Door de pagina op te delen uit twee delen (playlist informatie en playlist conte
 De interface heb ik zelf ontworpen en heb ik zo minimalistisch mogelijk proberen vorm te geven om de nadruk te leggen op de content (de afspeellijst zelf dus). Om goed duidelijk te maken welke elementen op moeten vallen, heb ik het contrast hoog gehouden. De achtergrond kleur is zo dus donkerblauw en de Buttons of andere CTA's zijn meer mint kleur of wit.
 
 ## Code
-Leg de code uit.
+<img src="assets/images/screenshots1.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
 ## Bronnen
 1. https://codepen.io/fitri/pen/VbrZQm
