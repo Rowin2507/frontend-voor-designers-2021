@@ -28,12 +28,13 @@ In het eerste deel van de code wordt het drag and drop principe mogelijk gemaakt
 <img src="v2/assets/images/screenshots/screenshot1.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
 
-In het tweede deel
+In het tweede deel wordt het standaard gedrag van het slepen van elementen (het sleepbare element is gefixeerd aan je muis en morphed weer terug naar zn oorspronkelijke positie op de pagina) binnen de browser uitgeschakelt voor de afspeellijst items. Hierdoor voelt het slepen van een element wat logischer aan en ontstaat er geen verwarring over de veranderde positie.
+In deze screenshot is ook de functie van de overlay te zien die in beeld komt als je op de exporteerknop klikt onderaan de pagina.
 
 <img src="v2/assets/images/screenshots/screenshot2.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
 
-In het eerste deel van de code wordt het drag and drop principe mogelijk gemaakt. In de screenshot is per stap beschreven wat er gebeurt.
+In het laatste deel van de JavaScript code, is te zien hoe de playlist informatie transitie tijdens de scroll wordt aangepast. Deze code maakt de playlist informatie kleiner tot je tot een bepaald punt hebt gescrolld om zo het overzicht te behouden en meer ruimte te geven voor de playlist. Er wordt gekeken naar de huidige scroll positie op de pagina en als je binnen een bepaalde waarde zit, worden er op meerdere elementen een transform en opacity uitgevoerd om zo de content te herpositioneren of onzichtbaar te maken.
 
 <img src="v2/assets/images/screenshots/screenshot3.png" width="100%" alt="Een screenshot van het eerste deel van mijn code.">
 
