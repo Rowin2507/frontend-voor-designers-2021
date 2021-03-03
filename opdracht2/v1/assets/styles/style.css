@@ -1,0 +1,403 @@
+/* CSS VARIABLES ---------------------------------------------- */
+/* https://www.w3schools.com/css/css3_variables.asp */
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --color-green: #4cc916;
+  --color-green-hover: #43b812;
+  --color-white: #FFFFFF;
+  --color-gray: #EFEFEF;
+  --color-dark: #1b1924;
+  --color-dark2: #17151f;
+
+  --image-height: 215px;
+}
+
+
+/* PREDEFINED ---------------------------------------------- */
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: var(--main-font);
+  appearance: none;
+  -webkit-appearance: none;
+}
+body {
+  margin: 0 auto;
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400; 
+  font-style: normal;
+  color: var(--color-dark); 
+  transition: 0.25s background-color, 0.25s color;
+}
+
+
+/* GENERAL STYLING ---------------------------------------------- */
+/* SLIDER */
+.toggle-slider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  opacity: 1 !important;
+}
+.toggle-slider input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+  outline: none;
+}
+.toggle-slider-in {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-gray);
+  border-radius: 32px;
+  transition: .3s ease;
+}
+.toggle-slider-in:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 3px;
+  bottom: 2px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  transition: .3s ease;
+}
+.toggle-slider:hover .toggle-slider, .toggle-slider:hover .toggle-slider-in {
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.075);
+}
+.toggle-slider input:checked + .toggle-slider-in {
+  background-color: var(--color-green);
+  box-shadow: 0px 5px 30px rgba(104,216,39,0.35);
+}
+.toggle-slider input:checked + .toggle-slider-in:before {
+  transform: translateX(13px);
+}
+/* PREVENT STANDARD CROSS */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+
+
+
+/* HEADER ----------- */
+
+
+/* MAIN ----------- */
+main {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+main:before {
+  content: '';
+  position: absolute;
+  top: calc(-850vw + 185px);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 850vw;
+  width: 850vw;
+  border-radius: 50%;
+  background-color: var(--color-gray);
+  z-index: -1;
+  transition: 0.25s background-color, 0.25s color;
+}
+
+
+/* HEADER SECTION */
+main section:nth-of-type(1) {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+main section:nth-of-type(1) h1 {
+  font-size: 2.5em;
+  transition: 0.25s color;
+}
+main section:nth-of-type(1) h1 span {
+  color: var(--color-green);
+}
+main section:nth-of-type(1) form {
+  display: inline-block;
+  position: relative;
+}
+main section:nth-of-type(1) form input[type="search"] {
+  position: relative;
+  display: inline-block;
+  padding: 0 25px;
+  height: 40px;
+  width: 400px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--color-gray);
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  transition: 0.25s background-color, 0.25s color;
+}
+main section:nth-of-type(1) form button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  border: none;
+  background-color: var(--color-green);
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 50%;
+  color: var(--color-white);
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.25s;
+}
+main section:nth-of-type(1) form button:hover {
+  background-color: var(--color-green-hover);
+}
+main section:nth-of-type(1) > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 100px auto 0 auto;
+  width: calc(90% + 15px);
+}
+main section:nth-of-type(1) > ul > li {
+  height: fit-content;
+  display: flex;
+  position: relative;
+}
+main section:nth-of-type(1) > ul > li:first-of-type,
+main section:nth-of-type(1) > ul > li:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 200px;
+}
+main section:nth-of-type(1) > ul > li > button {
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--color-white);
+  box-shadow: 0px 8px 20px rgb(0, 0, 0, 0.125);
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s;
+  z-index: 3;
+}
+main section:nth-of-type(1) > ul > li > button:hover {
+  box-shadow: 0px 15px 25px rgb(0, 0, 0, 0.125);
+  color: var(--color-green);
+}
+main section:nth-of-type(1) > ul > li > button.dropdown-visible {
+  box-shadow: 0px 8px 20px rgb(0, 0, 0, 0);
+}
+main section:nth-of-type(1) > ul > li > button svg {
+  height: 20px;
+  margin-right: 10px;
+  transition: 0.65s transform, 0.25s fill;
+}
+main section:nth-of-type(1) > ul > li > button:hover svg {
+  transform: rotate(120deg);
+  fill: var(--color-green);
+}
+main section:nth-of-type(1) > ul > li > ul {
+  position: absolute;
+  top: -8px;
+  right: -5px;
+  list-style: none;
+  padding: 75px 25px 20px 25px;
+  width: 250px;
+  text-align: left;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.2);
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: 0.45s opacity, 0.45s transform, 0.25s background-color, 0.25s color;
+}
+main section:nth-of-type(1) > ul > li > ul.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+main section:nth-of-type(1) > ul > li > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0;
+  transition: 0.25s border, 0.25s color;
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(odd) {
+  border-bottom: 1px solid var(--color-gray);
+  border-top: 1px solid var(--color-gray);
+}
+main section:nth-of-type(1) > ul > li > ul > li:first-of-type {
+  border-top: none;
+}
+main section:nth-of-type(1) > ul > li > ul > li h4 {
+  flex: 1;
+  font-size: 1em;
+  font-weight: 600;
+}
+main section:nth-of-type(1) > ul > li > ul > li h4:after {
+  margin-left: 10px;
+  display: inline-block;
+  border: 2px solid var(--color-dark);
+  border-radius: 5px;
+  padding: 1px 3px;
+  font-size: 0.75em;
+  font-weight: 700;
+  opacity: 0.15;
+  transition: 0.25s border;
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(1) h4:after {
+  content: 'D';
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) h4:after {
+  content: 'K';
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(3) h4:after {
+  content: '^';
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(4) h4:after {
+  content: 'C';
+  padding: 1px 4px 1px 3px;
+}
+
+
+
+/* GRID SECTION */
+main section:nth-of-type(2) {
+  margin: 0px 0 50px 0;
+}
+main section:nth-of-type(2) ul {
+  margin: 0 auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1em;
+  width: calc(90% + 15px);
+}
+main section:nth-of-type(2) ul li {
+  height: var(--image-height);
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main section:nth-of-type(2) ul li figure {
+  position: relative;
+}
+main section:nth-of-type(2) ul li figure img {
+  object-fit: cover;
+  height: var(--image-height);
+  width: 100%;
+}
+main section:nth-of-type(2) ul li figure figcaption {
+  position: absolute;
+  left: 13px;
+  bottom: 15px;
+  color: var(--color-white);
+  z-index: 2;
+}
+main section:nth-of-type(2) ul li figure figcaption h2 {
+  font-size: 1.25em;
+}
+main section:nth-of-type(2) ul li figure figcaption h3 {
+  font-size: 1em;
+  font-weight: 400;
+  opacity: 0.65;
+}
+main section:nth-of-type(2) ul li figure:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(to right top, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.45) 22%, rgba(0, 0, 0, 0.4) 25%, rgba(0, 0, 0, 0.2) 42%, rgba(0, 0, 0, 0.05) 48%, transparent 55%);
+  border-radius: 0 0 0 15px;
+  z-index: 1;
+}
+
+
+/* FOOTER ----------- */
+footer {
+  padding: 25px 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* DARKMODE ---------------------------------------------- */
+body.darkmode {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+body.darkmode main:before {
+  background-color: var(--color-dark2);
+}
+body.darkmode main section:nth-of-type(1) h1 {
+  color: var(--color-white);
+}
+body.darkmode main section:nth-of-type(1) form input[type="search"] {
+  background-color: var(--color-dark2);
+  color: var(--color-white);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > button {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  box-shadow: 0px 8px 20px rgb(0, 0, 0, 0.35);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > button.dropdown-visible {
+  box-shadow: 0px 8px 20px rgb(0, 0, 0, 0);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > button svg {
+  fill: var(--color-white);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > button:hover {
+  color: var(--color-green);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > button:hover svg {
+  fill: var(--color-green);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > ul {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.4);
+}
+body.darkmode  main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(odd) {
+  border-bottom: 1px solid var(--color-dark2);
+  border-top: 1px solid var(--color-dark2);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li:first-of-type {
+  border-top: none;
+}
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li h4:after {
+  border: 2px solid var(--color-white);
+  opacity: 0.11;
+}
