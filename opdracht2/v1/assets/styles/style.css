@@ -2,12 +2,14 @@
 /* https://www.w3schools.com/css/css3_variables.asp */
 :root {
   --main-font: 'Montserrat', sans-serif;
+  --font-size: 16px;
   --color-green: #4cc916;
   --color-green-hover: #43b812;
   --color-white: #FFFFFF;
   --color-gray: #EFEFEF;
   --color-dark: #1b1924;
   --color-dark2: #17151f;
+  --color-dark3: #15131c;
 
   --image-height: 215px;
 }
@@ -24,11 +26,12 @@
   font-family: var(--main-font);
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 body {
   margin: 0 auto;
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: var(--font-size);
   font-weight: 400; 
   font-style: normal;
   color: var(--color-dark); 
@@ -238,11 +241,13 @@ main section:nth-of-type(1) > ul > li > ul {
   box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.2);
   z-index: 2;
   opacity: 0;
+  visibility: hidden;
   transform: translateY(-15px);
-  transition: 0.45s opacity, 0.45s transform, 0.25s background-color, 0.25s color;
+  transition: 0.45s opacity, 0.45s transform, 0.45s visibility, 0.25s background-color, 0.25s color;
 }
 main section:nth-of-type(1) > ul > li > ul.visible {
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
 }
 main section:nth-of-type(1) > ul > li > ul > li {
@@ -264,7 +269,7 @@ main section:nth-of-type(1) > ul > li > ul > li h4 {
   font-size: 1em;
   font-weight: 600;
 }
-main section:nth-of-type(1) > ul > li > ul > li h4:after {
+main section:nth-of-type(1) > ul > li > ul > li h4:after, main section:nth-of-type(1) > ul > li > ul > li h4:before {
   margin-left: 10px;
   display: inline-block;
   border: 2px solid var(--color-dark);
@@ -274,6 +279,7 @@ main section:nth-of-type(1) > ul > li > ul > li h4:after {
   font-weight: 700;
   opacity: 0.15;
   transition: 0.25s border;
+  vertical-align: top;
 }
 main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(1) h4:after {
   content: 'D';
@@ -281,13 +287,71 @@ main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(1) h4:after {
 main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) h4:after {
   content: 'K';
 }
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(3) h4:before {
+  content: '→';
+  float: right;
+  margin-left: 2px;
+}
 main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(3) h4:after {
-  content: '^';
+  content: '←';
 }
 main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(4) h4:after {
   content: 'C';
   padding: 1px 4px 1px 3px;
 }
+
+
+
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(3) {
+  flex-direction: column;
+  align-items: flex-start;
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(3) > ol {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+  width: calc(100% + 11px);
+  transform: translateX(-4.5px);
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.175;
+  transition: .25s opacity;
+  pointer-events: none;
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(3):hover > ol {
+  opacity: 0.35;
+}
+main section:nth-of-type(1) > ul > li > ul > li input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  margin-top: 15px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-gray);
+  border-radius: 2px;
+  transition: 0.25s;
+}
+main section:nth-of-type(1) > ul > li > ul > li input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 15px; 
+  height: 15px; 
+  background-color: var(--color-green); 
+  box-shadow: 0px 5px 30px rgba(104,216,39,1);
+  border-radius: 50%; 
+  cursor: pointer; 
+  transition: 0.25s;
+}
+main section:nth-of-type(1) > ul > li > ul > li input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+
 
 
 
@@ -361,6 +425,15 @@ body.darkmode {
 body.darkmode main:before {
   background-color: var(--color-dark2);
 }
+body.darkmode .toggle-slider-in {
+  background-color: var(--color-dark3);
+}
+body.darkmode .toggle-slider-in:before {
+  background-color: var(--color-dark);
+}
+body.darkmode .toggle-slider input:checked + .toggle-slider-in:before {
+  background-color: var(--color-white);
+}
 body.darkmode main section:nth-of-type(1) h1 {
   color: var(--color-white);
 }
@@ -391,13 +464,34 @@ body.darkmode main section:nth-of-type(1) > ul > li > ul {
   box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.4);
 }
 body.darkmode  main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(odd) {
-  border-bottom: 1px solid var(--color-dark2);
-  border-top: 1px solid var(--color-dark2);
+  border-bottom: 1px solid var(--color-dark3);
+  border-top: 1px solid var(--color-dark3);
 }
 body.darkmode main section:nth-of-type(1) > ul > li > ul > li:first-of-type {
   border-top: none;
 }
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li h4:before,
 body.darkmode main section:nth-of-type(1) > ul > li > ul > li h4:after {
   border: 2px solid var(--color-white);
   opacity: 0.11;
+}
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li input[type="range"] {
+  background-color: var(--color-dark3);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 5px 35px rgba(104,216,39,1);
+}
+
+
+
+
+
+/* CHANGE SELECTOR COLOR */
+::selection {
+  color: var(--color-dark);
+  background: rgba(76, 201, 22 , 0.45);
+}
+::-moz-selection {
+  color: var(--color-dark);
+  background: rgba(76, 201, 22 , 0.45);
 }
