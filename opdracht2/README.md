@@ -24,6 +24,7 @@ De gebruiker blijft te allen tijde in controle en kan op verschillende manieren 
 In dit stukje code is te zien hoe ik aan de checkbox input een functie bind om de darkmode in te schakelen op de website. Door te klikken op deze checkbox (toggle), wordt er een functie uitgevoerd. In deze functie wordt in eerste instantie gekeken of de checkbox is aangevinkt of niet. Indien dit waar is, geeft die de class "darkmode" mee aan de body. Indien dit niet waar is, dan wordt deze class verwijderd van de body.
 
 ```
+// DARKMODE TOGGLE SLIDER
 var toggleDarkmode = document.querySelector('.toggle-slider.darkmode input');
 toggleDarkmode.addEventListener("click", toggleDarkmodeAppearance);
 
@@ -39,6 +40,7 @@ function toggleDarkmodeAppearance() {
 Naast het click Event te hebben gebruik, heb ik ook gebruik gemaakt van keydown. Door de "D" toets in te drukken, wordt er gekeken of de checkbox is aangevinkt. Indien dat juist blijkt te zijn, wordt de checbox weer uitgevinkt. Indien dit niet juist blijk te zijn, wordt de checbox wel aangevinkt. In beide gevallen wordt de functie uitgevoerd om de class toe te voegen of te verwijderen van de body.
 
 ```
+// DARKMODE TOGGLE SLIDER (D-key)
 body.addEventListener("keydown", event => {
     if (event.isComposing || event.key === 'd') {
         if (toggleDarkmode.checked == true){
