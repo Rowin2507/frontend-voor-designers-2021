@@ -210,7 +210,7 @@ main section:nth-of-type(1) > ul > li > button {
   font-weight: 500;
   cursor: pointer;
   transition: 0.25s;
-  z-index: 3;
+  z-index: 4;
 }
 main section:nth-of-type(1) > ul > li > button:hover {
   box-shadow: 0px 15px 25px rgb(0, 0, 0, 0.125);
@@ -239,7 +239,7 @@ main section:nth-of-type(1) > ul > li > ul {
   background-color: var(--color-white);
   border-radius: 20px;
   box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-15px);
@@ -299,9 +299,32 @@ main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(4) h4:after {
   content: 'C';
   padding: 1px 4px 1px 3px;
 }
-
-
-
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) > ul:hover li {
+  border: 2px solid var(--color-green);
+  box-shadow: 0px 5px 30px rgba(104,216,39,0.35);
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) > ul li {
+  padding: 0 4px;
+  min-width: 4px;
+  border: 2px solid var(--color-gray);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.25s border, 0.25s box-shadow;
+}
+main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) > ul li:nth-of-type(2) {
+  margin: 0 4px;
+  background-color: var(--color-green);
+  border: 2px solid var(--color-green);
+  color: var(--color-white);
+  box-shadow: 0px 5px 30px rgba(104,216,39,0.35);
+}
 main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(3) {
   flex-direction: column;
   align-items: flex-start;
@@ -353,8 +376,6 @@ main section:nth-of-type(1) > ul > li > ul > li input[type="range"]::-webkit-sli
 }
 
 
-
-
 /* GRID SECTION */
 main section:nth-of-type(2) {
   margin: 0px 0 50px 0;
@@ -372,6 +393,7 @@ main section:nth-of-type(2) ul li {
   background-color: #EFEFEF;
   border-radius: 10px;
   overflow: hidden;
+  transition: 0.25s background-color;
 }
 main section:nth-of-type(2) ul li figure {
   position: relative;
@@ -387,6 +409,7 @@ main section:nth-of-type(2) ul li figure figcaption {
   bottom: 15px;
   color: var(--color-white);
   z-index: 2;
+  transition: 0.25s color;
 }
 main section:nth-of-type(2) ul li figure figcaption h2 {
   font-size: 1.25em;
@@ -409,13 +432,76 @@ main section:nth-of-type(2) ul li figure:before {
   z-index: 1;
 }
 
-
 /* FOOTER ----------- */
 footer {
   padding: 25px 0;
   text-align: center;
   font-weight: 700;
 }
+
+
+
+/* LESS COLUMNS ---------------------------------------------- */
+body.less-columns main section:nth-of-type(2) ul {
+  grid-template-columns: auto auto auto;
+}
+body.less-columns main section:nth-of-type(2) ul li {
+  height: calc(var(--image-height) * 1.25);
+}
+body.less-columns main section:nth-of-type(2) ul li figure img,
+body.less-columns.compact main section:nth-of-type(2) ul li figure img {
+  height: calc(var(--image-height) * 1.25);
+}
+body.less-columns.compact main section:nth-of-type(2) ul li figure img {
+  height: calc(var(--image-height) * 0.8);
+  width: var(--image-height);
+}
+
+
+
+/* COMPACT ---------------------------------------------- */
+body.compact main section:nth-of-type(2) ul {
+  grid-gap: 0.75em;
+} 
+body.compact main section:nth-of-type(2) ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: calc(var(--image-height) * 0.115);
+  padding-right: calc(var(--image-height) * 0.115);
+}
+body.compact main section:nth-of-type(2) ul li figure:before {
+  display: none;
+}
+body.compact main section:nth-of-type(2) ul li figure {
+  display: flex;
+  flex-direction: row;
+}
+body.compact main section:nth-of-type(2) ul li figure img {
+  object-fit: cover;
+  height: calc(var(--image-height) * 0.8);
+  width: var(--image-height);
+  border-radius: 5px;
+}
+body.compact main section:nth-of-type(2) ul li figure figcaption {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  left: auto;
+  bottom: auto;
+  color: var(--color-dark);
+}
+body.compact main section:nth-of-type(2) ul li figure figcaption h2 {
+  font-size: 1em;
+  font-weight: 700;
+}
+body.compact main section:nth-of-type(2) ul li figure figcaption h3 {
+  font-size: 0.85em;
+}
+
+
 
 /* DARKMODE ---------------------------------------------- */
 body.darkmode {
@@ -475,14 +561,28 @@ body.darkmode main section:nth-of-type(1) > ul > li > ul > li h4:after {
   border: 2px solid var(--color-white);
   opacity: 0.11;
 }
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) > ul li {
+  border: 2px solid var(--color-dark3);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) > ul:hover li {
+  border: 2px solid var(--color-green);
+  box-shadow: 0px 5px 30px rgba(104,216,39,0.25);
+}
+body.darkmode main section:nth-of-type(1) > ul > li > ul > li:nth-of-type(2) > ul li:nth-of-type(2) {
+  border: 2px solid var(--color-green);
+}
 body.darkmode main section:nth-of-type(1) > ul > li > ul > li input[type="range"] {
   background-color: var(--color-dark3);
 }
 body.darkmode main section:nth-of-type(1) > ul > li > ul > li input[type="range"]::-webkit-slider-thumb {
   box-shadow: 0px 5px 35px rgba(104,216,39,1);
 }
-
-
+body.darkmode main section:nth-of-type(2) ul li {
+  background-color: var(--color-dark2);
+}
+body.darkmode main section:nth-of-type(2) ul li figure figcaption {
+  color: var(--color-white);
+}
 
 
 
