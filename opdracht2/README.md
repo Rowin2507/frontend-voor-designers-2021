@@ -35,3 +35,19 @@ function toggleDarkmodeAppearance() {
     }
 }
 ```
+
+Naast het click Event te hebben gebruik, ..
+
+```
+body.addEventListener("keydown", event => {
+    if (event.isComposing || event.key === 'd') {
+        if (toggleDarkmode.checked == true){
+            toggleDarkmode.checked = false;
+        } else {
+            toggleDarkmode.checked = true;
+        }
+        toggleDarkmodeAppearance();
+        return;
+    }
+});
+```
