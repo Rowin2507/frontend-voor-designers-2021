@@ -54,7 +54,7 @@ body.addEventListener("keydown", event => {
 });
 ```
 
-fgfg
+Om de tekstgrootte te wijzigen heb ik gebruik gemaakt van CSS variabelen. D.m.v. Javascript pas ik deze waarde aan a.d.h.v. de waarde in de slider (range). In Javascript wordt deze waarde uitgelezen en wordt de desbetreffende CSS variabele geüpdate door de nieuwe waarde. 
 
 ```
 // TEXT SIZE SLIDER
