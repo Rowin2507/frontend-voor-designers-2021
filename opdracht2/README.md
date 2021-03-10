@@ -5,9 +5,9 @@ Werk een functionaliteit uit die je kunt bedienen met 'click' en nog een user in
 Lees hier de [opdrachtbeschrijving](./opdrachtbeschrijving.md).
 
 
-# Project titel
-Beschrijf hier je eigen project.
-En voeg een link naar je demo toe.
+# Carspotter
+Een kleine opdracht om een settingspanel te maken op een foto overzichtspagina.
+<a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht2/v1/" target="_blank">Link naar opdracht (v1)</a>
 
 ## interface
 Leg de interface uit.
