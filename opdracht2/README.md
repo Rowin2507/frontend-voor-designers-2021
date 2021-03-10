@@ -5,16 +5,77 @@ Werk een functionaliteit uit die je kunt bedienen met 'click' en nog een user in
 Lees hier de [opdrachtbeschrijving](./opdrachtbeschrijving.md).
 
 
-# Project titel
-Beschrijf hier je eigen project.
-En voeg een link naar je demo toe.
+# Carspotter
+Een kleine opdracht om een settingspanel te maken op een foto overzichtspagina.
+<ul>
+  <li>
+    <a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht2/v1/" target="_blank">Link naar opdracht (v1)</a>
+  </li>
+</ul>
 
-## interface
-Leg de interface uit.
+## Interface
+Ik heb gekozen om een moderne interface te maken die de content centraal stelt. Om er toch nog een eigen identiteit aan te geven heb ik de site een naam te geven (Carspotter) en een eigen stijl. Het paneel met de instellingen is zowel subtiel als toch aanwezig genoeg om op te vallen. Het idee is dat het een soort pop-up menu is dat over de content heen gepostioneer wordt.
 
-In de demo heb je interface design principles 04, 08 & 09 van [Principles of User Interface Design](http://bokardo.com/principles-of-user-interface-design/) toegepast. Hoe heb je dat gedaan?
+De elementen in deze pop-up zijn ook modern gehouden en passen bij de algehele stijl van de website. Ik heb geprobeerd om meerdere triggers te maken voor de verschillende functies. Zo heb ik checkboxes gebruikt (met de vorm van een toggle slider) om de darkmode functie toe te passen en de compacte versie in te schakelen. Ook heb ik een slider gebruikt om de lettergrootte te wijzigen. Daarnaast kunnen alle functies d.m.v. keyboard shortcuts (aangegeven achter de functie naam in het grijs) ook nog worden uitgevoerd.
 
-In de demo heb je meerdere [UI events](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent) toegepast. Hoe heb je dat gedaan?
+De gebruiker blijft te allen tijde in controle en kan op verschillende manieren dus deze functies uitvoeren: zowel door de muis (click Event) te gebruiken als het toetsenbord (Keydown Event) - aangegeven door de grijze indicatoren achter de functie naam in het settings menu. 
 
-## code
-Leg de code uit.
+## Code
+In dit stukje code is te zien hoe ik aan de checkbox input een functie bind om de darkmode in te schakelen op de website. Door te klikken op deze checkbox (toggle), wordt er een functie uitgevoerd. In deze functie wordt in eerste instantie gekeken of de checkbox is aangevinkt of niet. Indien dit waar is, geeft die de class "darkmode" mee aan de body. Indien dit niet waar is, dan wordt deze class verwijderd van de body.
+
+```
+// DARKMODE TOGGLE SLIDER
+var toggleDarkmode = document.querySelector('.toggle-slider.darkmode input');
+toggleDarkmode.addEventListener("click", toggleDarkmodeAppearance);
+
+function toggleDarkmodeAppearance() {
+    if (toggleDarkmode.checked == true){
+        body.classList.add('darkmode');
+    } else {
+        body.classList.remove('darkmode');
+    }
+}
+```
+
+Naast het click Event te hebben gebruik, heb ik ook gebruik gemaakt van keydown. Door de "D" toets in te drukken, wordt er gekeken of de checkbox is aangevinkt. Indien dat juist blijkt te zijn, wordt de checbox weer uitgevinkt. Indien dit niet juist blijk te zijn, wordt de checbox wel aangevinkt. In beide gevallen wordt de functie uitgevoerd om de class toe te voegen of te verwijderen van de body.
+
+```
+// DARKMODE TOGGLE SLIDER (D-key)
+body.addEventListener("keydown", event => {
+    if (event.isComposing || event.key === 'd') {
+        if (toggleDarkmode.checked == true){
+            toggleDarkmode.checked = false;
+        } else {
+            toggleDarkmode.checked = true;
+        }
+        toggleDarkmodeAppearance();
+        return;
+    }
+});
+```
+
+Om de tekstgrootte te wijzigen heb ik gebruik gemaakt van CSS variabelen. D.m.v. Javascript pas ik deze waarde aan a.d.h.v. de waarde in de slider (range). In Javascript wordt deze waarde uitgelezen en wordt de desbetreffende CSS variabele geüpdate door de nieuwe waarde. 
+
+```
+// TEXT SIZE SLIDER
+var textSizeRange = document.querySelector('main section:nth-of-type(1) > ul > li > ul > li input[type="range"]');
+textSizeRange.addEventListener("input", textSizeSlider);
+
+function textSizeSlider() {
+    var textSizeRangeValue = textSizeRange.value;
+
+    // CHANGE CSS VARIABLE
+    root.style.setProperty('--font-size', textSizeRangeValue + 'px');
+}
+```
+
+## Bronnen
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event</a>
+  </li>
+  <li>
+    <a href="https://css-tricks.com/updating-a-css-variable-with-javascript/" target="_blank">https://css-tricks.com/updating-a-css-variable-with-javascript/</a>
+  </li>
+</ul>
+  
