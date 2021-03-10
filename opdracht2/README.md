@@ -36,7 +36,7 @@ function toggleDarkmodeAppearance() {
 }
 ```
 
-Naast het click Event te hebben gebruik, ..
+Naast het click Event te hebben gebruik, heb ik ook gebruik gemaakt van keydown. Door de "D" toets in te drukken, wordt er gekeken of de checkbox is aangevinkt. Indien dat juist blijkt te zijn, wordt de checbox weer uitgevinkt. Indien dit niet juist blijk te zijn, wordt de checbox wel aangevinkt. In beide gevallen wordt de functie uitgevoerd om de class toe te voegen of te verwijderen van de body.
 
 ```
 body.addEventListener("keydown", event => {
