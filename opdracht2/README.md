@@ -20,8 +20,5 @@ De elementen in deze pop-up zijn ook modern gehouden en passen bij de algehele s
 
 De gebruiker blijft te allen tijde in controle en kan op verschillende manieren dus deze functies uitvoeren: zowel door de muis (click Event) te gebruiken als het toetsenbord (Keydown Event) - aangegeven door de grijze indicatoren achter de functie naam in het settings menu. 
 
-
-In de demo heb je meerdere [UI events](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent) toegepast. Hoe heb je dat gedaan?
-
 ## code
 Leg de code uit.
