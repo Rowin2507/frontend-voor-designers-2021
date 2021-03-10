@@ -18,7 +18,7 @@ Ik heb gekozen om een moderne interface te maken die de content centraal stelt. 
 
 De elementen in deze pop-up zijn ook modern gehouden en passen bij de algehele stijl van de website. Ik heb geprobeerd om meerdere triggers te maken voor de verschillende functies. Zo heb ik checkboxes gebruikt (met de vorm van een toggle slider) om de darkmode functie toe te passen en de compacte versie in te schakelen. Ook heb ik een slider gebruikt om de lettergrootte te wijzigen. Daarnaast kunnen alle functies d.m.v. keyboard shortcuts (aangegeven achter de functie naam in het grijs) ook nog worden uitgevoerd.
 
-De gebruiker blijft te allen tijde in controle en kan op verschillende manieren dus deze functies uitvoeren: zowel door de muis te gebruiken als het toetsenbord - aangegeven door de grijze indicatoren achter de functie naam in het settings menu. 
+De gebruiker blijft te allen tijde in controle en kan op verschillende manieren dus deze functies uitvoeren: zowel door de muis (click Event) te gebruiken als het toetsenbord (Keydown Event) - aangegeven door de grijze indicatoren achter de functie naam in het settings menu. 
 
 
 In de demo heb je meerdere [UI events](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent) toegepast. Hoe heb je dat gedaan?
