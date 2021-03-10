@@ -7,10 +7,16 @@ Lees hier de [opdrachtbeschrijving](./opdrachtbeschrijving.md).
 
 # Carspotter
 Een kleine opdracht om een settingspanel te maken op een foto overzichtspagina.
-<a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht2/v1/" target="_blank">Link naar opdracht (v1)</a>
+<ul>
+  <li>
+    <a href="https://rowin2507.github.io/frontend-voor-designers-2021/opdracht2/v1/" target="_blank">Link naar opdracht (v1)</a>
+  </li>
+</ul>
 
 ## interface
-Leg de interface uit.
+Ik heb gekozen om een moderne interface te maken die de content centraal stelt. Om er toch nog een eigen identiteit aan te geven heb ik de site een naam te geven (Carspotter) en een eigen stijl. Het paneel met de instellingen is zowel subtiel als toch aanwezig genoeg om op te vallen. Het idee is dat het een soort pop-up menu is dat over de content heen gepostioneer wordt.
+
+De elementen in deze pop-up zijn ook modern gehouden en passen bij de algehele stijl van de website. Ik heb geprobeerd om meerdere triggers te maken voor de verschillende functies. Zo heb ik checkboxes gebruikt (met de vorm van een toggle slider) om de darkmode functie toe te passen en de compacte versie in te schakelen. Ook heb ik een slider gebruikt om de lettergrootte te wijzigen. Daarnaast kunnen alle functies d.m.v. keyboard shortcuts (aangegeven achter de functie naam in het grijs) ook nog worden uitgevoerd.
 
 In de demo heb je interface design principles 04, 08 & 09 van [Principles of User Interface Design](http://bokardo.com/principles-of-user-interface-design/) toegepast. Hoe heb je dat gedaan?
 
