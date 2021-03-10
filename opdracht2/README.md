@@ -21,10 +21,17 @@ De elementen in deze pop-up zijn ook modern gehouden en passen bij de algehele s
 De gebruiker blijft te allen tijde in controle en kan op verschillende manieren dus deze functies uitvoeren: zowel door de muis (click Event) te gebruiken als het toetsenbord (Keydown Event) - aangegeven door de grijze indicatoren achter de functie naam in het settings menu. 
 
 ## Code
-Leg de code uit.
+In dit stukje code is te zien hoe ik aan de checkbox input een functie bind om de darkmode in te schakelen op de website. Door te klikken op deze checkbox (toggle), wordt er een functie uitgevoerd. In deze functie wordt in eerste instantie gekeken of de checkbox is aangevinkt of niet. Indien dit waar is, geeft die de class "darkmode" mee aan de body. Indien dit niet waar is, dan wordt deze class verwijderd van de body.
 
 ```
-function test() {
-  console.log("notice the blank line before this function?");
+var toggleDarkmode = document.querySelector('.toggle-slider.darkmode input');
+toggleDarkmode.addEventListener("click", toggleDarkmodeAppearance);
+
+function toggleDarkmodeAppearance() {
+    if (toggleDarkmode.checked == true){
+        body.classList.add('darkmode');
+    } else {
+        body.classList.remove('darkmode');
+    }
 }
 ```
