@@ -13,12 +13,18 @@ Een kleine opdracht om een settingspanel te maken op een foto overzichtspagina.
   </li>
 </ul>
 
-## interface
+## Interface
 Ik heb gekozen om een moderne interface te maken die de content centraal stelt. Om er toch nog een eigen identiteit aan te geven heb ik de site een naam te geven (Carspotter) en een eigen stijl. Het paneel met de instellingen is zowel subtiel als toch aanwezig genoeg om op te vallen. Het idee is dat het een soort pop-up menu is dat over de content heen gepostioneer wordt.
 
 De elementen in deze pop-up zijn ook modern gehouden en passen bij de algehele stijl van de website. Ik heb geprobeerd om meerdere triggers te maken voor de verschillende functies. Zo heb ik checkboxes gebruikt (met de vorm van een toggle slider) om de darkmode functie toe te passen en de compacte versie in te schakelen. Ook heb ik een slider gebruikt om de lettergrootte te wijzigen. Daarnaast kunnen alle functies d.m.v. keyboard shortcuts (aangegeven achter de functie naam in het grijs) ook nog worden uitgevoerd.
 
 De gebruiker blijft te allen tijde in controle en kan op verschillende manieren dus deze functies uitvoeren: zowel door de muis (click Event) te gebruiken als het toetsenbord (Keydown Event) - aangegeven door de grijze indicatoren achter de functie naam in het settings menu. 
 
-## code
+## Code
 Leg de code uit.
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
