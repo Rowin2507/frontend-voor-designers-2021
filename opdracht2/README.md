@@ -53,3 +53,29 @@ body.addEventListener("keydown", event => {
     }
 });
 ```
+
+fgfg
+
+```
+// TEXT SIZE SLIDER
+var textSizeRange = document.querySelector('main section:nth-of-type(1) > ul > li > ul > li input[type="range"]');
+textSizeRange.addEventListener("input", textSizeSlider);
+
+function textSizeSlider() {
+    var textSizeRangeValue = textSizeRange.value;
+
+    // CHANGE CSS VARIABLE
+    root.style.setProperty('--font-size', textSizeRangeValue + 'px');
+}
+```
+
+## Bronnen
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event</a>
+  </li>
+  <li>
+    <a href="https://css-tricks.com/updating-a-css-variable-with-javascript/" target="_blank">https://css-tricks.com/updating-a-css-variable-with-javascript/</a>
+  </li>
+</ul>
+  
